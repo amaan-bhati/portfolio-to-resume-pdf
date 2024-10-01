@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 // import kiitLogo from "public/logos/kiit-logo.png";
+// import DarkLightToggle from "./components/shadCn/DarkLightToggle";
+import DarkLightToggle from "./components/DarkLightToggle";
 
 
 export const metadata: Metadata = {
@@ -105,6 +107,7 @@ const resumeData = {
 export default function WorkPage() {
 	return (
 		<section>
+       {/* <DarkLightToggle /> */}
 			<div className="flex">
 				<h1 className='font-medium text-xl mb-0 mt-0 tracking-tight font-["monospace"]'>
 					Amaan Bhati's Resume
