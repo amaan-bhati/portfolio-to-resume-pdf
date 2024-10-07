@@ -66,6 +66,41 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
 	return (
-		
+		<section>
+			<h1 className='font-medium text-2xl mb-6 tracking-tight font-["monospace"]'>
+				Contact 📧
+			</h1>
+
+			{/* Social Links */}
+			<div className="prose prose-neutral dark:prose-invert">
+				<p>Feel free to reach out to me via any of the following platforms:</p>
+
+				<ul className="pl-0">
+					{socials.map((social, index) => (
+						<li key={index} className="flex items-center mb-4">
+							<Image
+								src={social.logo}
+								alt={social.name}
+								width={24}
+								height={24}
+								className="!mr-2"
+							/>
+
+							<div className="flex items-center not-prose">
+								<strong>{social.name}:</strong>{" "}
+								<a
+									target="_blank"
+									rel="noopener noreferrer"
+									href={social.url}
+									className="ml-2 underline"
+								>
+									{social.display}
+								</a>
+							</div>
+						</li>
+					))}
+				</ul>
+			</div>
+		</section>
 	);
 }
