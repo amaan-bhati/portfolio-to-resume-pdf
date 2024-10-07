@@ -6,16 +6,18 @@ const navItems = {
 	"/": {
 		name: "Home",
 	},
-	// "/projects": {
-	// 	name: "Projects",
-	// },
-	// "/resume": {
-	// 	name: "Resume",
-	// },
-	// "/contact": {
-	// 	name: "Contact",
-	// },
-	
+	"/projects": {
+		name: "Projects",
+	},
+	"/resume": {
+		name: "Resume",
+	},
+	"/contact": {
+		name: "Contact",
+	},
+	"/blog": {
+		name: "Blog",
+	},
 };
 
 export function Navbar() {
@@ -44,7 +46,7 @@ export function Navbar() {
 							);
 						})}
 					</div>
-					{currentRoute === "/" && (
+					{currentRoute === "/resume" && (
 						<div
 							className="border-solid border-2 border-slate-500 p-2 rounded-md hover:bg-slate-800 hover:text-white hover:cursor-pointer flex gap-1.5"
 							onClick={handlePrint}
